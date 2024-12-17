@@ -12,4 +12,4 @@ const sendResponse = <T>(res:Response, data:TSuccessResponse<T>) =>{
     })
 }
 
-export default sendResponse
+export default sendResponse;

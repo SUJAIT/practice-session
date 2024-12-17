@@ -9,7 +9,7 @@ const catchAsync = (func:RequestHandler)=>{
         Promise.resolve(func(req,res,next)).catch((error)=>next(error))
     }
 }
-
+//akna muloto req res a r modda any error asla ta promise Error ta next function a pataia diba and sa error app.ts ar modda mara global error defaine kora  function ar modda catch kora falba and ta amdar dekaba
 export default catchAsync
 
 
