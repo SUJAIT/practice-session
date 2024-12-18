@@ -64,7 +64,7 @@ const createBooking = async (payload: IBooking): Promise<IBooking> => {
         }
 
         const booking = await Booking.create([payload], { session })
-
+//[note: Akna Mongoose Bolsa tumar body ta ka akta array ar modda pata ba.and tumi session ar modda aso sata obj dia bola diba.]
         console.log(booking);
         // throw new Error('Failed to create booking');
 
@@ -82,7 +82,7 @@ const createBooking = async (payload: IBooking): Promise<IBooking> => {
 
         await session.endSession()
 
-        return booking[0]
+        return booking[0]//[note: amra booking variable ar ja kaj ta kortasi ta akta array ar bitor object hisaba return kora so sa jonno array 0 index a raka]
 
     } catch (error) {
         await session.abortTransaction()
