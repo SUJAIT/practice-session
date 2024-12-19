@@ -5,8 +5,8 @@ const userSchema = new Schema<IUser>({
   name: {
     type: String,
     required: [true, 'Please provide your name'],
-    minlength: 3,
-    maxlength: 50,
+    minlength: 3, //validator
+    maxlength: 50,//validator
   },
   age: { type: Number, required: [true, 'Please enter your age'] },
   email: {
